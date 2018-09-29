@@ -1,37 +1,50 @@
 <template>
-  <div class="container c1">
-    nihao 
-    <div class="c2">
-      aa
-      {{name}}
-      {{ss}}
-    </div>
-  </div>
+
 </template>
 
 <script>
-import {mapGetters} from 'vuex';
-export default {
-  data () {
-    return {
-      msg: 'Welcome to Your Vue.js App'
-    }
-  },    
-  computed: {
-        ...mapGetters([
-            'name',
-            'ss'
-        ])
+  export default {
+    data() {
+      return {
+        tableData: [{
+          date: '2016-05-03',
+          name: '王小虎',
+          province: '上海',
+          city: '普陀区',
+          address: '上海市普陀区金沙江路 1518 弄',
+          zip: 200333,
+          tag: '家'
+        }, {
+          date: '2016-05-02',
+          name: '王小虎',
+          province: '上海',
+          city: '普陀区',
+          address: '上海市普陀区金沙江路 1518 弄',
+          zip: 200333,
+          tag: '公司'
+        }, {
+          date: '2016-05-04',
+          name: '王小虎',
+          province: '上海',
+          city: '普陀区',
+          address: '上海市普陀区金沙江路 1518 弄',
+          zip: 200333,
+          tag: '家'
+        }, {
+          date: '2016-05-01',
+          name: '王小虎',
+          province: '上海',
+          city: '普陀区',
+          address: '上海市普陀区金沙江路 1518 弄',
+          zip: 200333,
+          tag: '公司'
+        }],
+      }
     },
-}
-</script>
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="less">
-  .c1{
-    color:red;
-    .c2{
-      color:green
+    methods: {
+      indexMethod(index) {
+        return index * 2;
+      }
     }
-  }
-</style>
+  };
+</script>

@@ -1,14 +1,17 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
+import Vue from 'vue';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
-import App from './App'
-import router from './router'
+import App from './App';
+import router from './router';
 import store from './store/index.js';
-import './assets/css/bootstrap.min.css'
-import fastclick from 'fastclick'
+import './assets/css/bootstrap.min.css';
+import './assets/css/main.css';
+import fastclick from 'fastclick';
 import axios from 'axios';
+import VueParticles from 'vue-particles'  
+Vue.use(VueParticles)  
 
 Vue.config.productionTip = false
 Vue.use(ElementUI, {
